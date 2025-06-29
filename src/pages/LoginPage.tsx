@@ -134,9 +134,7 @@ const LoginPage: React.FC = () => {
         <Grid container sx={{ height: '100%', alignItems: 'center', justifyContent: 'center', maxWidth: '1400px' }} spacing={{ xs: 2, md: 4 }}>
           {/* Left Side - Feature Showcase */}
           <Grid 
-            item 
-            xs={12} 
-            md={6} 
+            {...({ item: true, xs: 12, md: 6 } as any)}
             sx={{ 
               display: 'flex',
               flexDirection: 'column',
@@ -249,9 +247,7 @@ const LoginPage: React.FC = () => {
 
           {/* Right Side - Login Form */}
           <Grid 
-            item 
-            xs={12} 
-            md={5} 
+            {...({ item: true, xs: 12, md: 5 } as any)}
             sx={{ 
               display: 'flex',
               alignItems: 'center',

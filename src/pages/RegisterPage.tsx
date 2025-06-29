@@ -15,7 +15,6 @@ import {
   Paper,
   Chip,
   Fade,
-  useTheme,
   alpha,
 } from '@mui/material';
 import {
@@ -49,7 +48,6 @@ const RegisterPage: React.FC = () => {
   const [error, setError] = useState('');
   const [currentFeature, setCurrentFeature] = useState(0);
 
-  const theme = useTheme();
   const navigate = useNavigate();
   const { login } = useAuth();
   const { showAlert } = useAlert();
@@ -181,9 +179,7 @@ const RegisterPage: React.FC = () => {
         <Grid container sx={{ height: '100%', alignItems: 'center', justifyContent: 'center', maxWidth: '1400px' }} spacing={{ xs: 2, md: 4 }}>
           {/* Left Side - Feature Showcase */}
           <Grid 
-            item 
-            xs={12} 
-            md={6} 
+            {...({ item: true, xs: 12, md: 6 } as any)}
             sx={{ 
               display: 'flex',
               flexDirection: 'column',
@@ -296,9 +292,7 @@ const RegisterPage: React.FC = () => {
 
           {/* Right Side - Registration Form */}
           <Grid 
-            item 
-            xs={12} 
-            md={5} 
+            {...({ item: true, xs: 12, md: 5 } as any)}
             sx={{ 
               display: 'flex',
               alignItems: 'center',
